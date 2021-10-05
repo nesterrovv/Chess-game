@@ -7,7 +7,7 @@ public class Pawn extends ChessPiece {
 
     private boolean firstMovement = true;
 
-    public Pawn(int x, int y, Color color, Type type) {
+    public Pawn(int x, int y, Color color) {
         this.x = x;
         this.y = y;
         this.color = color;
@@ -35,5 +35,4 @@ public class Pawn extends ChessPiece {
             return true;
         } else return false;
     }
-
 }
