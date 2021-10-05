@@ -15,7 +15,7 @@ public abstract class ChessPiece {
     }
 
     public boolean take(int xGoal, int yGoal) {
-        return move(xGoal, yGoal); // because taking pieces using (not pawn) piece is equal movement to this cell
+        return this.move(xGoal, yGoal); // because taking pieces using (not pawn) piece is equal movement to this cell
     }
 
     public boolean isAlive() {

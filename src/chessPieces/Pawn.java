@@ -17,7 +17,7 @@ public class Pawn extends ChessPiece {
     @Override
     public boolean move(int xGoal, int yGoal) {
         if (firstMovement) {
-            if ((yGoal - this.y == 1 || yGoal - this.y == 2) && xGoal - this.x == 0) {
+            if ((Math.abs(yGoal - this.y) == 1 || Math.abs(yGoal - this.y) == 2) && xGoal - this.x == 0) {
                 this.firstMovement = false;
                 this.y = yGoal; // movement
                 return true;
