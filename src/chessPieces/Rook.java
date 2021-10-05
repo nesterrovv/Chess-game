@@ -21,9 +21,4 @@ public class Rook extends ChessPiece {
         } else return false;
     }
 
-    @Override
-    public boolean take(int xGoal, int yGoal) {
-        return move(xGoal, yGoal); // because taking pieces using rook is equal movement to the cell
-    }
-
 }
