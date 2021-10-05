@@ -9,7 +9,7 @@ public class Horse extends ChessPiece {
         this.x = x;
         this.y = y;
         this.color = color;
-        this.type = Type.ELEPHANT;
+        this.type = Type.HORSE;
     }
 
     @Override
