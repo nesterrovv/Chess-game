@@ -3,12 +3,14 @@ package gameProcess;
 import chessPieces.*;
 import chessPieces.resources.Color;
 
+import java.util.Arrays;
+
 public class Board {
 
     /** Two-dimensional array for keeping info about cells condition */
     private ChessPiece[][] board = new ChessPiece[8][8];
-    private ChessPiece[] whiteTeam = new ChessPiece[16];
-    private ChessPiece[] blackTeam = new ChessPiece[16];
+    //private ChessPiece[] whiteTeam = new ChessPiece[16];
+    //private ChessPiece[] blackTeam = new ChessPiece[16];
 
     public void makeStartingPosition() {
         for (int i = 0; i < 8; i++) {
@@ -48,7 +50,6 @@ public class Board {
         board[6][5] = new Pawn(1, 5, Color.BLACK);
         board[6][6] = new Pawn(1, 6, Color.BLACK);
         board[6][7] = new Pawn(1, 7, Color.BLACK);
-        // ADD HERE FILLING ARRAYS WITH PIECES OF BOTH COMMANDS
     }
 
     public boolean movePiece(int xInit, int yInit, int xGoal, int yGoal) {
@@ -70,6 +71,26 @@ public class Board {
         } else return false;
     }
 
-    public boolean removePiece() {}
+    @Override
+    public String toString() {
+        return "Board{" +
+                "board=" + Arrays.toString(board) +
+                '}';
+    }
+
+    public void printBoard() {
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                    if (board[i][j] == null) {
+                        System.out.format("%-20.17s", "null");
+                    } else {
+                        System.out.format("%-29.17s", board[i][j].print());
+                    }
+            }
+            System.out.println();
+        }
+    }
+
+    //public boolean removePiece() {}
 
 }
